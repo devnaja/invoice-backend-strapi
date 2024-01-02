@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "token": {
+      "type": "text"
+    },
+    "TIN": {
+      "type": "text"
+    },
+    "SST": {
+      "type": "string"
+    },
+    "MSIC": {
+      "type": "string"
+    },
+    "tourismTax": {
+      "type": "string"
+    },
+    "identifier": {
+      "type": "text"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "companyID"
+    },
+    "parentID": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "companyID": {
+      "type": "string"
+    },
+    "transactionID": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::transaction.transaction",
+      "mappedBy": "companyID"
+    }
+  }
+}

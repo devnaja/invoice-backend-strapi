@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_histories",
+  "info": {
+    "singularName": "request-history",
+    "pluralName": "request-histories",
+    "displayName": "RequestHistory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reqID": {
+      "type": "string"
+    },
+    "ReqDate": {
+      "type": "datetime"
+    },
+    "reqHeader": {
+      "type": "text"
+    },
+    "reqBody": {
+      "type": "text"
+    },
+    "reqParam": {
+      "type": "string"
+    },
+    "reqUrl": {
+      "type": "string"
+    },
+    "rtnDate": {
+      "type": "datetime"
+    },
+    "rtnStatusCode": {
+      "type": "string"
+    },
+    "rtnHeader": {
+      "type": "text"
+    },
+    "rtnBody": {
+      "type": "text"
+    },
+    "transID": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::transaction.transaction"
+    }
+  }
+}

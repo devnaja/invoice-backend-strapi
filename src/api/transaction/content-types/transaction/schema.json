@@ -1,0 +1,181 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tranType": {
+      "type": "string"
+    },
+    "supplierName": {
+      "type": "string"
+    },
+    "buyerName": {
+      "type": "string"
+    },
+    "supTin": {
+      "type": "string"
+    },
+    "supID": {
+      "type": "string"
+    },
+    "supSst": {
+      "type": "string"
+    },
+    "supTourismTax": {
+      "type": "string"
+    },
+    "supEmail": {
+      "type": "email"
+    },
+    "supMsic": {
+      "type": "string"
+    },
+    "supBusDesc": {
+      "type": "text"
+    },
+    "supAddress": {
+      "type": "text"
+    },
+    "supPhone": {
+      "type": "biginteger"
+    },
+    "supBankAcctNum": {
+      "type": "biginteger"
+    },
+    "buyTin": {
+      "type": "string"
+    },
+    "buyID": {
+      "type": "uid"
+    },
+    "buySst": {
+      "type": "string"
+    },
+    "buyEmail": {
+      "type": "email"
+    },
+    "buyAddress": {
+      "type": "text"
+    },
+    "buyPhone": {
+      "type": "biginteger"
+    },
+    "eInvVer": {
+      "type": "string"
+    },
+    "eInvType": {
+      "type": "string"
+    },
+    "eInvNum": {
+      "type": "biginteger"
+    },
+    "eInvRefNum": {
+      "type": "biginteger"
+    },
+    "eInvDate": {
+      "type": "datetime"
+    },
+    "validateDate": {
+      "type": "datetime"
+    },
+    "supDigitalSign": {
+      "type": "string"
+    },
+    "currCode": {
+      "type": "string"
+    },
+    "currExRate": {
+      "type": "string"
+    },
+    "billFreq": {
+      "type": "string"
+    },
+    "billPeriod": {
+      "type": "string"
+    },
+    "irbmUniqueID": {
+      "type": "uid"
+    },
+    "prodClass": {
+      "type": "string"
+    },
+    "prodDesc": {
+      "type": "text"
+    },
+    "prodUnitPrice": {
+      "type": "decimal"
+    },
+    "prodTaxType": {
+      "type": "string"
+    },
+    "prodTaxRate": {
+      "type": "string"
+    },
+    "prodTaxAmt": {
+      "type": "decimal"
+    },
+    "prodTaxExemptDesc": {
+      "type": "text"
+    },
+    "prodTaxExemptAmt": {
+      "type": "text"
+    },
+    "prodSubtotal": {
+      "type": "decimal"
+    },
+    "prodTotalExclTax": {
+      "type": "decimal"
+    },
+    "prodTotalInclTax": {
+      "type": "decimal"
+    },
+    "prodQty": {
+      "type": "integer"
+    },
+    "prodMeasure": {
+      "type": "string"
+    },
+    "prodDiscRate": {
+      "type": "string"
+    },
+    "prodDiscAmt": {
+      "type": "decimal"
+    },
+    "payMode": {
+      "type": "string"
+    },
+    "payTerm": {
+      "type": "string"
+    },
+    "payAmt": {
+      "type": "decimal"
+    },
+    "payDate": {
+      "type": "datetime"
+    },
+    "payRefNum": {
+      "type": "text"
+    },
+    "billRefNum": {
+      "type": "text"
+    },
+    "transID": {
+      "type": "string"
+    },
+    "companyID": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company",
+      "inversedBy": "transactionID"
+    }
+  }
+}
