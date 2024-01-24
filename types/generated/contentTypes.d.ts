@@ -381,21 +381,10 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
     MSIC: Attribute.String;
     tourismTax: Attribute.String;
     identifier: Attribute.Text;
-    users: Attribute.Relation<
-      'api::company.company',
-      'oneToMany',
-      'plugin::users-permissions.user'
-    >;
-    parentID: Attribute.Relation<
+    parent: Attribute.Relation<
       'api::company.company',
       'oneToOne',
       'api::company.company'
-    >;
-    companyID: Attribute.String;
-    transactionID: Attribute.Relation<
-      'api::company.company',
-      'oneToOne',
-      'api::transaction.transaction'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -428,20 +417,20 @@ export interface ApiRequestHistoryRequestHistory extends Schema.CollectionType {
   };
   attributes: {
     reqID: Attribute.String;
-    ReqDate: Attribute.DateTime;
+    reqDate: Attribute.DateTime;
     reqHeader: Attribute.Text;
-    reqBody: Attribute.Text;
     reqParam: Attribute.String;
     reqUrl: Attribute.String;
     rtnDate: Attribute.DateTime;
     rtnStatusCode: Attribute.String;
     rtnHeader: Attribute.Text;
     rtnBody: Attribute.Text;
-    transID: Attribute.Relation<
+    transaction: Attribute.Relation<
       'api::request-history.request-history',
       'oneToOne',
       'api::transaction.transaction'
     >;
+    reqBody: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -486,7 +475,6 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
     supPhone: Attribute.BigInteger;
     supBankAcctNum: Attribute.BigInteger;
     buyTin: Attribute.String;
-    buyID: Attribute.UID;
     buySst: Attribute.String;
     buyEmail: Attribute.Email;
     buyAddress: Attribute.Text;
@@ -525,11 +513,13 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
     payRefNum: Attribute.Text;
     billRefNum: Attribute.Text;
     transID: Attribute.String;
-    companyID: Attribute.Relation<
+    buyId: Attribute.String;
+    company: Attribute.Relation<
       'api::transaction.transaction',
       'oneToOne',
       'api::company.company'
     >;
+    status: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -936,10 +926,9 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    userID: Attribute.String;
-    companyID: Attribute.Relation<
+    company: Attribute.Relation<
       'plugin::users-permissions.user',
-      'manyToOne',
+      'oneToOne',
       'api::company.company'
     >;
     createdAt: Attribute.DateTime;

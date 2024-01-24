@@ -54,9 +54,6 @@
     "buyTin": {
       "type": "string"
     },
-    "buyID": {
-      "type": "uid"
-    },
     "buySst": {
       "type": "string"
     },
@@ -171,11 +168,16 @@
     "transID": {
       "type": "string"
     },
-    "companyID": {
+    "buyId": {
+      "type": "string"
+    },
+    "company": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::company.company",
-      "inversedBy": "transactionID"
+      "target": "api::company.company"
+    },
+    "status": {
+      "type": "string"
     }
   }
 }

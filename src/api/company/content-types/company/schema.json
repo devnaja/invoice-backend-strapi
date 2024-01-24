@@ -33,25 +33,10 @@
     "identifier": {
       "type": "text"
     },
-    "users": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "companyID"
-    },
-    "parentID": {
+    "parent": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::company.company"
-    },
-    "companyID": {
-      "type": "string"
-    },
-    "transactionID": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::transaction.transaction",
-      "mappedBy": "companyID"
     }
   }
 }

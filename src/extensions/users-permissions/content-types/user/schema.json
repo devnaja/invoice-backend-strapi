@@ -65,14 +65,10 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "userID": {
-      "type": "string"
-    },
-    "companyID": {
+    "company": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::company.company",
-      "inversedBy": "users"
+      "relation": "oneToOne",
+      "target": "api::company.company"
     }
   }
 }
