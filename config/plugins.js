@@ -21,8 +21,8 @@
 //       host: "smtp.gmail.com",
 //       port: 587,
 //       auth: {
-//         user: "aaron.kxw@tomtatechnology.com",
-//         pass: "aarontomta",
+//         user: "",
+//         pass: "",
 //       },
 //     },
 //     settings: {

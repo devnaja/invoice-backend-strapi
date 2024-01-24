@@ -1,13 +1,13 @@
 module.exports = ({ env }) => ({
   auth: {
-    secret: env("ADMIN_JWT_SECRET", "qC4xYz1/B8ddWjnufwSXug=="),
+    secret: env("ADMIN_JWT_SECRET", env.array("ADMIN_JWT_SECRET")),
   },
   apiToken: {
-    salt: env("API_TOKEN_SALT", "LX1R8Jqwd5plRerdB946fQ"),
+    salt: env("API_TOKEN_SALT", env.array("API_TOKEN_SALT")),
   },
   transfer: {
     token: {
-      salt: env("TRANSFER_TOKEN_SALT", "1A/Y2gC16S/5F2qPsiCbcg=="),
+      salt: env("TRANSFER_TOKEN_SALT", env.array("TRANSFER_TOKEN_SALT")),
     },
   },
   flags: {
