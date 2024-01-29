@@ -520,6 +520,11 @@ export interface ApiTransactionTransaction extends Schema.CollectionType {
       'api::company.company'
     >;
     status: Attribute.String;
+    request_history: Attribute.Relation<
+      'api::transaction.transaction',
+      'oneToOne',
+      'api::request-history.request-history'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

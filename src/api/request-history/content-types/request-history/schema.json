@@ -42,7 +42,8 @@
     "transaction": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::transaction.transaction"
+      "target": "api::transaction.transaction",
+      "inversedBy": "request_history"
     },
     "reqBody": {
       "type": "string"

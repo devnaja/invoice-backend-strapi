@@ -178,6 +178,12 @@
     },
     "status": {
       "type": "string"
+    },
+    "request_history": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::request-history.request-history",
+      "mappedBy": "transaction"
     }
   }
 }
