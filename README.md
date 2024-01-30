@@ -1,26 +1,15 @@
+# Step to clone this project
+
+1. Clone the project via cloning HTTPS/SSH url `(git clone HTTPS_URL)` or you may download the zip file directly.
+2. Next open the project folder, in root directory run `npm install`
+3. Then duplicate `env.example` file and rename it into `.env`
+4. Replace `tobemodified` value to your own database credential and for Strapi token you can get the token once you success login Strapi as super admin.
+5. Next run `npm install sqlite3`
+6. Lastly run `npm run develop`
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
-
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
 
 ### `build`
 
@@ -28,8 +17,6 @@ Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-
 
 ```
 npm run build
-# or
-yarn build
 ```
 
 ## ⚙️ Deployment
