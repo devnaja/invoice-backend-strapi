@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "reqID": {
-      "type": "string"
-    },
     "reqDate": {
       "type": "datetime"
     },

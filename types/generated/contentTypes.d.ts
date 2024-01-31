@@ -416,7 +416,6 @@ export interface ApiRequestHistoryRequestHistory extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    reqID: Attribute.String;
     reqDate: Attribute.DateTime;
     reqHeader: Attribute.Text;
     reqParam: Attribute.String;
